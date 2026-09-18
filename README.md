@@ -4,6 +4,8 @@ A landing page for an artisanal coffee roastery based in Moscow. Built as a port
 
 > **Note:** This is a client-side frontend project without a live backend. Table reservation and newsletter subscription forms operate entirely on the client side to demonstrate input validation and user interaction flows.
 
+Production: https://ugli-cafe.vercel.app
+
 ---
 
 ## Features
