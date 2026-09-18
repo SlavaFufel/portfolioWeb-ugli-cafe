@@ -1,0 +1,52 @@
+.marquee {
+  overflow: hidden;
+  background: var(--accent-deep);
+  border-block: 1px solid var(--gold);
+  padding-block: var(--space-4);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-2xl);
+  color: var(--accent-soft);
+  white-space: nowrap;
+  padding-inline: clamp(1rem, 2vw, 2rem);
+}
+
+.marquee__sep {
+  margin-left: clamp(2rem, 4vw, 4rem);
+  color: var(--gold);
+  font-style: normal;
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover/focus — a mechanism to stop the motion (WCAG 2.2.2) */
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

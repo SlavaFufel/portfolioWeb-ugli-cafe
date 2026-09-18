@@ -1,0 +1,27 @@
+/* Eyebrow — small letterspaced kicker above headings */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent-text);
+}
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold-600);
+}
+.eyebrow--light {
+  color: var(--gold-400);
+}
+.eyebrow--light::before {
+  background: var(--gold-400);
+}
+.eyebrow--center {
+  justify-content: center;
+}

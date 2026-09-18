@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kornilov-partners.ru/sitemap.xml

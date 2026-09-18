@@ -1,0 +1,72 @@
+/* ============================================================
+   «Угли» — design tokens
+   Warm artisan / heritage-roastery system.
+   Palette, type scale, spacing, motion — single source of truth.
+   ============================================================ */
+
+:root {
+  /* ---- Color: warm parchment base, espresso ink, terracotta action ---- */
+  --bg: #f4ecdd;
+  --bg-alt: #eadcc3;
+  --surface: #fbf6ea;
+  --surface-alt: #f1e6d2;
+  --ink: #2a1c12;
+  --ink-muted: #6e5a47;
+  --accent: #b5471f; /* terracotta — action / emphasis */
+  --accent-deep: #5e2c18; /* deep espresso-sienna — hovers, footer ground */
+  --accent-soft: #e6c9a8; /* soft clay tint — chips, fills */
+  --line: #c9b79a; /* hairline */
+  --gold: #a6822b; /* brass — small jewelry accents */
+  --olive: #556b2f; /* structural calm — open-now dot */
+
+  /* derived */
+  --ink-on-accent: #fbf6ea;
+  --shadow-sm: 0 1px 2px rgba(42, 28, 18, 0.06), 0 2px 8px rgba(42, 28, 18, 0.05);
+  --shadow-md: 0 4px 14px rgba(42, 28, 18, 0.1), 0 12px 34px rgba(42, 28, 18, 0.09);
+  --shadow-lg: 0 18px 50px rgba(42, 28, 18, 0.18);
+
+  /* ---- Typography ---- */
+  --font-display: 'Fraunces', 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-xl: clamp(1.35rem, 1.2rem + 0.7vw, 1.75rem);
+  --text-2xl: clamp(1.7rem, 1.4rem + 1.4vw, 2.6rem);
+  --text-3xl: clamp(2.3rem, 1.7rem + 2.6vw, 4rem);
+  --text-hero: clamp(4.5rem, 2rem + 13vw, 15rem);
+
+  --leading-tight: 1.04;
+  --leading-snug: 1.18;
+  --leading-normal: 1.62;
+  --tracking-eyebrow: 0.26em;
+
+  /* ---- Spacing & layout ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-section: clamp(3.75rem, 2.5rem + 5vw, 7rem);
+
+  --container: 1600px;
+  --container-narrow: 980px;
+  --gutter: clamp(1.25rem, 0.4rem + 2.4vw, 3.25rem);
+  --frame-inset: clamp(0.75rem, 0.3rem + 1.5vw, 1.5rem);
+
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* ---- Motion ---- */
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --dur-ui: 0.24s;
+  --dur-content: 0.8s;
+}

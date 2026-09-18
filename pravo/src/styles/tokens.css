@@ -1,0 +1,113 @@
+/* ============================================================
+   Design tokens — Adвокатское бюро «Корнилов и Партнёры»
+   Style: Trust & Authority · Deep navy + disciplined gold accent
+   ============================================================ */
+
+:root {
+  /* ---- Navy scale (brand base) ---- */
+  --navy-900: #081627; /* near-black ink navy — darkest surfaces */
+  --navy-800: #0b1f3a; /* primary dark surface (hero, footer, CTA band) */
+  --navy-700: #11294b; /* primary brand */
+  --navy-600: #1b3a63;
+  --navy-500: #2a4e7e;
+  --navy-400: #4a6a96;
+
+  /* ---- Gold scale (accent — used as hairlines, marks, details) ---- */
+  --gold-200: #efe3c4;
+  --gold-300: #e6d3a3;
+  --gold-400: #d4b878;
+  --gold-500: #c5a253; /* primary accent */
+  --gold-600: #a8843a;
+  --gold-700: #8c6d2a; /* gold text on light surfaces (AA) */
+
+  /* ---- Neutrals (warm, "paper" feel) ---- */
+  --ivory: #f6f4ee; /* page background */
+  --ivory-100: #fbfaf6;
+  --paper: #ffffff; /* card surface on light */
+  --ink: #0b1626; /* primary text on light — ~16:1 on ivory */
+  --ink-soft: #3a4a60; /* secondary text on light — AA */
+  --ink-faint: #586676; /* tertiary / meta text — ~4.6:1 on ivory (AA) */
+
+  /* ---- Text on dark navy ---- */
+  --on-dark: #f4f1e8; /* headings on navy (warm white) */
+  --on-dark-soft: #c3cdda; /* body on navy — AA on navy-800 */
+  --on-dark-faint: #9caabb; /* tertiary on navy — ~4.6:1 on navy-900 (AA) */
+
+  /* ---- Lines / borders ---- */
+  --line: #e3dccb; /* hairline on ivory */
+  --line-strong: #d3c9b0;
+  --line-on-dark: rgba(229, 211, 163, 0.18); /* faint gold line on dark */
+
+  /* ---- Semantic ---- */
+  --color-bg: var(--ivory);
+  --color-surface: var(--paper);
+  --color-text: var(--ink);
+  --color-accent: var(--gold-600);
+  --color-accent-text: var(--gold-700);
+  --color-danger: #b3261e;
+  --color-success: #2e6b4f;
+
+  /* ---- Typography ---- */
+  --font-display: 'EB Garamond', 'Times New Roman', Georgia, serif;
+  --font-body: 'Lato', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Fluid type scale (clamp: min @375px → max @1440px) */
+  --text-xs: 0.75rem; /* 12 */
+  --text-sm: 0.875rem; /* 14 */
+  --text-base: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem); /* 16–17 */
+  --text-lg: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);
+  --text-xl: clamp(1.35rem, 1.2rem + 0.7vw, 1.6rem);
+  --text-2xl: clamp(1.7rem, 1.4rem + 1.3vw, 2.25rem);
+  --text-3xl: clamp(2.1rem, 1.6rem + 2.2vw, 3rem);
+  --text-4xl: clamp(2.6rem, 1.8rem + 3.6vw, 4.25rem);
+  --text-5xl: clamp(3rem, 1.9rem + 5vw, 5.5rem); /* hero display */
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.16em; /* eyebrow labels */
+
+  /* ---- Spacing (8pt rhythm) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-section: clamp(4rem, 2.5rem + 6vw, 8.5rem);
+
+  /* ---- Layout ---- */
+  --container: 1600px;
+  --container-narrow: 760px;
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+
+  /* ---- Radii (restrained — luxury reads as crisp, not bubbly) ---- */
+  --radius-sm: 3px;
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  /* ---- Elevation (disciplined, cool navy-tinted shadows) ---- */
+  --shadow-sm: 0 1px 2px rgba(8, 22, 39, 0.06);
+  --shadow: 0 6px 20px -8px rgba(8, 22, 39, 0.18);
+  --shadow-lg: 0 24px 60px -24px rgba(8, 22, 39, 0.32);
+
+  /* ---- Motion ---- */
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 520ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---- z-index scale ---- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 40;
+  --z-nav: 100;
+  --z-overlay: 1000;
+}

@@ -1,0 +1,45 @@
+.emblem {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.emblem__ring {
+  fill: none;
+  stroke: var(--gold-500);
+  stroke-width: 1.4;
+  opacity: 0.85;
+}
+.emblem__ring--2 {
+  stroke: var(--gold-400);
+  stroke-width: 1;
+  opacity: 0.55;
+}
+
+.emblem__text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  fill: var(--gold-300);
+}
+
+.emblem__mono {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 80px;
+  fill: var(--on-dark);
+}
+.emblem__amp {
+  font-size: 40px;
+  fill: var(--gold-500);
+}
+
+.emblem__sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  fill: var(--gold-400);
+  opacity: 0.8;
+}

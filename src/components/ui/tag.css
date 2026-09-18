@@ -1,0 +1,42 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.28em 0.62em;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.tag--hit {
+  color: var(--accent);
+  background: rgba(181, 71, 31, 0.1);
+  border-color: rgba(181, 71, 31, 0.28);
+}
+.tag--new {
+  color: var(--olive);
+  background: rgba(85, 107, 47, 0.1);
+  border-color: rgba(85, 107, 47, 0.3);
+}
+.tag--vegan {
+  color: #3f5a22;
+  background: rgba(85, 107, 47, 0.14);
+  border-color: rgba(85, 107, 47, 0.34);
+}
+.tag--spicy {
+  color: var(--accent-deep);
+  background: rgba(94, 44, 24, 0.1);
+  border-color: rgba(94, 44, 24, 0.3);
+}
+.tag--gf,
+.tag--lf,
+.tag--default {
+  color: var(--ink-muted);
+  background: rgba(110, 90, 71, 0.08);
+  border-color: var(--line);
+}

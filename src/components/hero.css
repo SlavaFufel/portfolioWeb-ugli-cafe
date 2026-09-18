@@ -1,0 +1,137 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+/* Full-bleed clipped photograph (clip-path reveal + parallax happen here) */
+.hero__media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero__img {
+  position: absolute;
+  top: -8%;
+  left: 0;
+  width: 100%;
+  height: 116%;
+  object-fit: cover;
+  will-change: transform, clip-path;
+}
+
+.hero__warmth {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 12% 96%, rgba(42, 28, 18, 0.72), rgba(42, 28, 18, 0.16) 45%, transparent 68%),
+    linear-gradient(to top, rgba(42, 28, 18, 0.55), transparent 48%);
+}
+
+.hero__steam {
+  inset: auto;
+  left: 39%;
+  width: 22%;
+  top: 24%;
+  bottom: 36%;
+}
+
+/* ---- Overlaid content ---- */
+.hero__chip {
+  position: absolute;
+  top: calc(4.75rem + 1rem);
+  right: var(--gutter);
+  z-index: 6;
+}
+
+.hero__seal {
+  position: absolute;
+  bottom: clamp(1.5rem, 4vw, 3rem);
+  right: var(--gutter);
+  z-index: 6;
+  filter: drop-shadow(0 8px 18px rgba(42, 28, 18, 0.45));
+}
+
+.hero__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(3rem, 8vh, 6.5rem);
+  z-index: 5;
+  color: var(--surface);
+}
+
+.hero__eyebrow {
+  color: var(--accent-soft);
+  margin-bottom: var(--space-4);
+}
+.hero__eyebrow::before {
+  background: var(--gold);
+}
+
+.hero__word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-hero);
+  line-height: 0.82;
+  letter-spacing: -0.03em;
+  color: var(--surface);
+  margin-left: -0.04em;
+  text-shadow: 0 4px 44px rgba(42, 28, 18, 0.5);
+}
+.hero__char {
+  display: inline-block;
+  will-change: transform, clip-path;
+}
+
+.hero__tagline {
+  font-size: var(--text-xl);
+  color: var(--accent-soft);
+  margin-top: var(--space-4);
+}
+
+.hero__sub {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: rgba(251, 246, 234, 0.9);
+  max-width: 34rem;
+  margin-top: var(--space-4);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+.hero__ghost {
+  --btn-fg: var(--surface);
+  border-color: rgba(251, 246, 234, 0.55);
+  background: rgba(251, 246, 234, 0.06);
+}
+.hero__ghost:hover {
+  background: rgba(251, 246, 234, 0.14);
+  border-color: var(--surface);
+  --btn-fg: var(--surface);
+}
+
+@media (max-width: 700px) {
+  .hero__seal {
+    width: 88px;
+    height: 88px;
+    bottom: 1.25rem;
+  }
+  .hero__sub {
+    font-size: var(--text-base);
+  }
+  .hero__chip {
+    top: calc(4.75rem + 0.6rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__seal {
+    display: none;
+  }
+}

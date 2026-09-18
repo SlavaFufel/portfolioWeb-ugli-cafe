@@ -1,0 +1,128 @@
+.btn {
+  --btn-bg: var(--navy-800);
+  --btn-fg: var(--on-dark);
+  --btn-border: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 50px;
+  padding: 0.85em 1.6em;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--btn-fg);
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--radius);
+  transition: background var(--dur) var(--ease-out), color var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out), transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+  will-change: transform;
+}
+
+.btn__arrow {
+  transition: transform var(--dur) var(--ease-out);
+}
+.btn:hover .btn__arrow {
+  transform: translateX(4px);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary — navy fill on light surfaces */
+.btn--primary {
+  --btn-bg: var(--navy-800);
+  --btn-fg: #fff;
+}
+.btn--primary:hover {
+  --btn-bg: var(--navy-700);
+}
+
+/* Cream — warm-white fill, navy text. Main CTA on dark surfaces. */
+.btn--cream {
+  --btn-bg: var(--on-dark);
+  --btn-fg: var(--navy-900);
+}
+.btn--cream:hover {
+  --btn-bg: var(--gold-300);
+}
+
+/* Outline — gold hairline on light surfaces (secondary) */
+.btn--outline {
+  --btn-bg: transparent;
+  --btn-fg: var(--gold-700);
+  --btn-border: var(--gold-600);
+}
+.btn--outline:hover {
+  --btn-bg: var(--navy-800);
+  --btn-fg: #fff;
+  --btn-border: var(--navy-800);
+  box-shadow: var(--shadow);
+}
+
+/* Outline light — for dark surfaces (secondary) */
+.btn--outline-light {
+  --btn-bg: transparent;
+  --btn-fg: var(--on-dark);
+  --btn-border: var(--line-on-dark);
+}
+.btn--outline-light:hover {
+  --btn-fg: var(--gold-300);
+  --btn-border: var(--gold-400);
+  box-shadow: none;
+}
+
+/* Link — quiet text action with animated gold underline */
+.btn--link {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-accent-text);
+  min-height: auto;
+  padding: 0.2em 0;
+  border-radius: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: var(--text-base);
+  background-image: linear-gradient(var(--gold-600), var(--gold-600));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+.btn--link:hover {
+  transform: none;
+  box-shadow: none;
+  background-size: 100% 1px;
+}
+
+/* Sizes */
+.btn--sm {
+  min-height: 42px;
+  font-size: var(--text-xs);
+  padding: 0.7em 1.2em;
+}
+.btn--lg {
+  min-height: 58px;
+  font-size: var(--text-base);
+  padding: 1em 2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn__arrow {
+    transition: background var(--dur) ease, color var(--dur) ease, border-color var(--dur) ease;
+  }
+  .btn:hover {
+    transform: none;
+  }
+  .btn:hover .btn__arrow {
+    transform: none;
+  }
+}

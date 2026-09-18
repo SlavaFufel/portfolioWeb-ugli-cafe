@@ -1,0 +1,128 @@
+.about {
+  background: var(--surface);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(360px, 460px);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.about__title {
+  font-size: var(--text-3xl);
+  margin-top: var(--space-3);
+}
+.about__title-line {
+  display: block;
+}
+
+.about__body {
+  margin-top: var(--space-8);
+  max-width: 40rem;
+}
+.about__p {
+  color: var(--ink-muted);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+.about__p + .about__p {
+  margin-top: var(--space-4);
+}
+.about__p:first-child {
+  color: var(--ink);
+  font-size: var(--text-lg);
+}
+
+.about__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-top: var(--space-12);
+}
+.about__stat {
+  position: relative;
+  padding-right: clamp(1.5rem, 4vw, 3rem);
+}
+.about__stat:not(:last-child) {
+  border-right: 1px solid var(--line);
+}
+.about__stat-value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--accent);
+}
+.about__stat-label {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+  max-width: 12ch;
+}
+
+/* ---- Media stack ---- */
+.about__media {
+  position: relative;
+}
+.about__photo {
+  margin: 0;
+  padding: 6px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  box-shadow:
+    0 0 0 1px var(--gold),
+    var(--shadow-md);
+  overflow: hidden;
+}
+.about__photo--lead {
+  aspect-ratio: 4 / 5;
+}
+.about__photo img {
+  width: 100%;
+  height: 118%;
+  position: relative;
+  top: -9%;
+  object-fit: cover;
+  border-radius: 2px;
+  will-change: transform;
+}
+.about__photo--inset {
+  position: absolute;
+  bottom: -2.5rem;
+  left: -3rem;
+  width: 56%;
+  aspect-ratio: 4 / 3;
+  rotate: -2.5deg;
+  box-shadow:
+    0 0 0 1px var(--gold),
+    var(--shadow-lg);
+}
+.about__caption {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.7rem;
+  right: 0.7rem;
+  color: var(--surface);
+  font-size: var(--text-sm);
+  text-shadow: 0 1px 6px rgba(42, 28, 18, 0.7);
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__media {
+    margin-top: var(--space-8);
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about__photo--inset {
+    width: 60%;
+    left: -1rem;
+    bottom: -1.5rem;
+  }
+}

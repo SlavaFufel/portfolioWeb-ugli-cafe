@@ -1,0 +1,108 @@
+.open-status {
+  --dot: var(--olive);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+}
+
+.open-status__dot {
+  position: relative;
+  flex-shrink: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--dot);
+}
+.open-status__halo {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--dot);
+  opacity: 0.55;
+}
+
+.is-open {
+  --dot: var(--olive);
+}
+.is-soon {
+  --dot: var(--gold);
+}
+.is-closed {
+  --dot: #a99a86;
+}
+
+/* Breathing halo only while open / closing soon */
+.is-open .open-status__halo,
+.is-soon .open-status__halo {
+  animation: open-pulse 2.2s var(--ease-out) infinite;
+}
+@keyframes open-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.open-status__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.open-status__label {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--ink);
+}
+.open-status__detail {
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+}
+
+/* ---- Chip variant (hero, top-right) ---- */
+.open-status--chip {
+  background: rgba(251, 246, 234, 0.94);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 0.95rem 0.5rem 0.8rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Panel variant (hours section) ---- */
+.open-status--panel {
+  --dot-size: 0.85rem;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+.open-status--panel .open-status__dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.35rem;
+}
+.open-status--panel .open-status__label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.open-status--panel .open-status__detail {
+  font-size: var(--text-base);
+  margin-top: 0.35rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open-status__halo {
+    animation: none;
+  }
+}
